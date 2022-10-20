@@ -1,5 +1,10 @@
-package org.example;
+package com.example.CleanCards;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@AllArgsConstructor
+@Data
 public class Hero {
     private String name;
     private Integer hp;
@@ -9,15 +14,4 @@ public class Hero {
     private String specialty;
     private String rarity;
     private Integer level;
-
-    public Hero(String name, Integer hp, Integer xp, Integer power, Integer armor, String specialty, String rarity, Integer level) {
-        this.name = name;
-        this.hp = hp;
-        this.xp = xp;
-        this.power = power;
-        this.armor = armor;
-        this.specialty = specialty;
-        this.rarity = rarity;
-        this.level = level;
-    }
 }
