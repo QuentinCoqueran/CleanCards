@@ -1,10 +1,10 @@
-package com.example.CleanCards;
+package com.cleancode.cleancards;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CleanCardsApplicationTests {
+class CleancardsApplicationTests {
 
 	@Test
 	void contextLoads() {

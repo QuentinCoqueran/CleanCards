@@ -1,4 +1,4 @@
-package com.example.CleanCards;
+package com.cleancode.cleancards.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
