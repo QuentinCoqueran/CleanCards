@@ -1,17 +1,37 @@
 package com.cleancode.cleancards.models;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@NoArgsConstructor
 @Data
 public class Hero {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @NotNull
     private String name;
+    @NotNull
     private Integer hp;
+    @NotNull
     private Integer xp;
+    @NotNull
     private Integer power;
+    @NotNull
     private Integer armor;
+    @NotNull
     private Speciality specialty;
+    @NotNull
     private Rarity rarity;
+    @NotNull
     private Integer level;
 
     public Hero(String name, Speciality speciality, Rarity rarity) {
@@ -37,7 +57,7 @@ public class Hero {
                 this.armor = 10;
             }
         }
-        switch(rarity) {
+        switch (rarity) {
             case Common:
                 break;
             case Rare:
