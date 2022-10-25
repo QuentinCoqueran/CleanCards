@@ -9,24 +9,21 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 @Service
 public class HeroService {
-    private HeroRepository repo;
+	private final HeroRepository heroRepository;
 
-    public Iterable<Hero> findAll() {
-        return repo.findAll();
-    }
+	public void createHero(Hero hero) {
+		Hero createHero = new Hero(hero.getName(), hero.getSpecialty(), hero.getRarity());
+		heroRepository.save(createHero);
+	}
 
-    public Hero findById(Long id) {
-        if (repo.findById(id).isPresent()) {
-            return repo.findById(id).get();
-        }
-        throw new IllegalArgumentException("hero with id " + id + " is not exist.");
-    }
+	public Iterable<Hero> findAll() {
+		return heroRepository.findAll();
+	}
 
-    public void createHero(Hero hero) {
-        repo.save(hero);
-    }
-
-    public void delete(Long id) {
-        repo.deleteById(id);
-    }
+	public Hero findById(Long id) {
+		if (heroRepository.findById(id).isPresent()) {
+			return heroRepository.findById(id).get();
+		}
+		throw new IllegalArgumentException("hero with id " + id + " is not exist.");
+	}
 }

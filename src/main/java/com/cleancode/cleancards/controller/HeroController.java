@@ -26,7 +26,7 @@ public class HeroController {
     }
 
     @PostMapping("/hero")
-    public ResponseEntity<String> create(@Validated @RequestBody Hero hero) {
+    public ResponseEntity<String> create(@RequestBody Hero hero) {
         heroService.createHero(hero);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
