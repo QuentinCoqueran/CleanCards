@@ -16,7 +16,7 @@ import javax.persistence.Id;
 public class Hero {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long idHero;
 	@NotNull
 	private String name;
 	@NotNull

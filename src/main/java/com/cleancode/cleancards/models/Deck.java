@@ -10,18 +10,20 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 public class Deck {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@ManyToOne
-	@MapsId("id")
-	@JoinColumn(name = "id")
-	@NotNull
-	Player player;
+    @ManyToOne
+    @JoinColumn(name = "idPlayer")
+    @NotNull
+    Player player;
 
-	@ManyToOne
-	@MapsId("id")
-	@JoinColumn(name = "id")
-	Hero hero;
+    @ManyToOne
+    @JoinColumn(name = "idHero")
+    Hero hero;
+
+    public Deck(Player player) {
+        this.player = player;
+    }
 }
