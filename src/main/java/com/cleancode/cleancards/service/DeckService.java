@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Service
 public class DeckService {
@@ -17,7 +19,11 @@ public class DeckService {
         deckRepository.save(deck);
     }
 
-    public Deck findByPlayer(Player player) {
+    public List<Deck> findByPlayer(Player player) {
         return deckRepository.findByPlayer(player);
+    }
+
+    public void updateDeck(Deck newDeck) {
+        deckRepository.save(newDeck);
     }
 }

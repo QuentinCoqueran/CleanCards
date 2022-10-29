@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
@@ -27,8 +24,10 @@ public class Hero {
 	private Integer power;
 	@NotNull
 	private Integer armor;
+	@Enumerated(EnumType.STRING)
 	@NotNull
 	private Speciality specialty;
+	@Enumerated(EnumType.STRING)
 	@NotNull
 	private Rarity rarity;
 	@NotNull

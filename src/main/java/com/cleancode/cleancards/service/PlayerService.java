@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 @AllArgsConstructor
 @Service
@@ -34,13 +36,16 @@ public class PlayerService {
     }
 
     @Transactional
-    public Deck findDeckByIdPlayer(Long id) {
+    public List<Deck> findDeckByIdPlayer(Long id) {
         Player player = findById(id);
-        Deck deck = deckService.findByPlayer(player);
+        List<Deck> deck = deckService.findByPlayer(player);
         if (deck != null) {
             return deck;
         }
         throw new IllegalArgumentException("Deck with id " + id + " is not exist.");
     }
 
+    public void updatePlayer(Player player) {
+        playerRepository.save(player);
+    }
 }

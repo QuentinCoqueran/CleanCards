@@ -30,6 +30,4 @@ public class HeroController {
         heroService.createHero(hero);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-
-
 }

@@ -26,4 +26,5 @@ public class Deck {
     public Deck(Player player) {
         this.player = player;
     }
+    
 }
