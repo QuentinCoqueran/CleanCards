@@ -1,27 +1,30 @@
 package com.cleancode.cleancards.models;
 
+import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-@Data
 @NoArgsConstructor
+@Data
 public class Fight {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String idFight;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idFight;
 
+	@ManyToOne
+	@JoinColumn(name = "idHeroAlly")
+	@NotNull
+	Hero idHeroAlly;
 
-    @ManyToOne
-    @JoinColumn(name = "idHero")
-    Hero idHeroAlly;
+	@ManyToOne
+	@JoinColumn(name = "idHeroEnemy")
+	@NotNull
+	Hero idHeroEnemy;
 
-    @ManyToOne
-    @JoinColumn(name = "idHero")
-    Hero idHeroEnemy;
-
-    private Boolean isWin;
+	@NotNull
+	private boolean isWin;
 
 }
