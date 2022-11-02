@@ -1,5 +1,6 @@
 package com.cleancode.cleancards.models;
 
+import com.cleancode.cleancards.enums.CardsPackType;
 import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import javax.persistence.*;
 public class CardsPack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Long idCardsPack;
     @NotNull
     private Integer requiredTokens;
     @NotNull

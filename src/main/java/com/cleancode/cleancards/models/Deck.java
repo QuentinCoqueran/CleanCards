@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Deck {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idDeck;
 
     @ManyToOne
     @JoinColumn(name = "idPlayer")

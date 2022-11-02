@@ -10,21 +10,21 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 @RestController
 public class PlayerController {
-	private final PlayerService playerService;
+    private final PlayerService playerService;
 
-	@GetMapping("/player")
-	public ResponseEntity<Iterable<Player>> findAll() {
-		return ResponseEntity.ok(playerService.findAll());
-	}
+    @GetMapping("/player")
+    public ResponseEntity<Iterable<Player>> findAll() {
+        return ResponseEntity.ok(playerService.findAll());
+    }
 
-	@GetMapping("/player/{id}")
-	public ResponseEntity<Player> findById(@PathVariable Long id) {
-		return ResponseEntity.ok(playerService.findById(id));
-	}
+    @GetMapping("/player/{id}")
+    public ResponseEntity<Player> findById(@PathVariable Long id) {
+        return ResponseEntity.ok(playerService.findById(id));
+    }
 
-	@PostMapping("/player")
-	public ResponseEntity<String> create(@RequestBody Player player) {
-		playerService.subscribePlayer(player);
-		return new ResponseEntity<>(HttpStatus.CREATED);
-	}
+    @PostMapping("/player")
+    public ResponseEntity<String> create(@RequestBody Player player) {
+        playerService.subscribePlayer(player);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 }

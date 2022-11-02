@@ -2,7 +2,7 @@ package com.cleancode.cleancards.repository;
 
 
 import com.cleancode.cleancards.models.Hero;
-import com.cleancode.cleancards.models.Rarity;
+import com.cleancode.cleancards.enums.Rarity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
