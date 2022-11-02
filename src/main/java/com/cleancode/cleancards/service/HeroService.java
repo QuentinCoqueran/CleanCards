@@ -2,7 +2,7 @@ package com.cleancode.cleancards.service;
 
 
 import com.cleancode.cleancards.models.Hero;
-import com.cleancode.cleancards.models.Rarity;
+import com.cleancode.cleancards.enums.Rarity;
 import com.cleancode.cleancards.repository.HeroRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

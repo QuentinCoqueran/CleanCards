@@ -1,4 +1,4 @@
-package com.cleancode.cleancards.models;
+package com.cleancode.cleancards.enums;
 
 public enum CardsPackType {
     Argent,

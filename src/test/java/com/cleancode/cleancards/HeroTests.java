@@ -1,8 +1,8 @@
 package com.cleancode.cleancards;
 
 import com.cleancode.cleancards.models.Hero;
-import com.cleancode.cleancards.models.Rarity;
-import com.cleancode.cleancards.models.Speciality;
+import com.cleancode.cleancards.enums.Rarity;
+import com.cleancode.cleancards.enums.Speciality;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

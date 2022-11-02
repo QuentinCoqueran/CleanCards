@@ -1,7 +1,8 @@
 package com.cleancode.cleancards.models;
 
+import com.cleancode.cleancards.enums.Rarity;
+import com.cleancode.cleancards.enums.Speciality;
 import com.sun.istack.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
